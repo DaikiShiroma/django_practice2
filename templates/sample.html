@@ -1,3 +1,5 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static "download/home.css" %}">
 <h1>{{name|upper}}</h1>
 <h1>{{page_url|urlize}}</h1>
 <p>BMI:{{bmi|floatformat:2}}</p>
@@ -13,3 +15,5 @@
 {%endfilter%}
 
 <a href="{% url "template_app:home" first_name="saburo" last_name="yamada" %}">home</a>
+
+<img src="{% static "download/sample.jpg" %}">
