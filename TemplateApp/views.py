@@ -5,18 +5,20 @@ def index(request):
     val="Good Bye"
     return render(request,"index.html",context={"value":val})
 
-def home(request):
-    my_name="Taro Yamada"
+def home(request,first_name,last_name):
+    my_name=f"{first_name}{last_name}"
     favourite_fruits=["Apple","Grape","Lemon"]
     my_info={
         "name":"Taro",
         "age":18
     }
+    status=20
 
     return render (request,"home.html",context={
         "my_name":my_name,
         "favourite_fruits":favourite_fruits,
-        "my_info":my_info
+        "my_info":my_info,
+        "status":status,
     })
 
 def sample1(request):
